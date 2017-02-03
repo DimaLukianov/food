@@ -1,0 +1,26 @@
+<script type="text/x-template" id="meal">
+  <tr>
+    <td>{{ meal.title }}</td>
+    <td>{{ meal.description }}</td>
+    <td>{{ meal.kind }}</td>
+    <td>{{ meal.price }}</td>
+  </tr>
+</script>
+
+<h2>Meals</h2>
+<div id="meals">
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Kind</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr is="meal" v-for="meal in meals" :meal="meal">
+      </tr>
+    </tbody>
+  </table>
+</div>
